@@ -23,6 +23,19 @@ body {
   background-color: #2f4f3f;
   color: white;
   padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.botao-menu {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
 }
 
 .logo {
@@ -80,4 +93,24 @@ body {
   color: white;
   text-align: center;
   padding: 1rem;
+}
+
+@media (max-width: 700px) {
+  .botao-menu {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+  }
+
+  .menu.aberto {
+    display: block;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
 }
